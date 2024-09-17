@@ -2,8 +2,8 @@ export const classNames = {
   default: `
     font-Montserrat
     font-semibold
-    !text-black
-    bg-contrast-100
+    !text-neutral-100
+    !bg-contrast-100
     hover:bg-contrast-90
     active:bg-contrast-30
 

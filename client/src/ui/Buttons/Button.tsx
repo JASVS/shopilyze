@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 import cn from 'classnames';
 
@@ -14,6 +14,7 @@ type Props = {
   type?: 'button' | 'submit';
   disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  icon?: ReactNode;
 };
 
 export const PrimaryButton: FC<Props> = ({
@@ -22,6 +23,7 @@ export const PrimaryButton: FC<Props> = ({
   type = 'button',
   disabled = false,
   onClick,
+  icon,
 }) => (
   <Button
     type={type}
@@ -29,7 +31,7 @@ export const PrimaryButton: FC<Props> = ({
     onClick={onClick}
     className={cn(
       buttonVariants({ variant }),
-      'w-full block text-neutral-100 !rounded-lg',
+      'w-full flex text-neutral-100 !rounded-lg gap-2',
       {
         [classNames.default]: variant === 'default',
         [classNames.secondary]: variant === 'secondary',
@@ -37,6 +39,7 @@ export const PrimaryButton: FC<Props> = ({
       },
     )}
   >
+    {icon}
     {text}
   </Button>
 );

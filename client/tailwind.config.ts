@@ -33,8 +33,8 @@ const config: Config = {
           '20': '#DFDAD6',
           '10': '#F3EEEA',
         },
-        'text-color-black': '#120C08',
-        'text-color-white': '#F8F2ED',
+        'color-black': '#120C08',
+        'color-white': '#F8F2ED',
         mark: {
           correct: '#4AE43C',
           wrong: '#ED4747',

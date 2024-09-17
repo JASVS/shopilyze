@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 import cn from 'classnames';
 import Link from 'next/link';
@@ -12,6 +12,7 @@ type Props = {
   href: string;
   variant?: 'default' | 'secondary' | 'outline';
   disabled?: boolean;
+  icon?: ReactNode;
 };
 
 export const PrimaryButtonLink: FC<Props> = ({
@@ -19,13 +20,14 @@ export const PrimaryButtonLink: FC<Props> = ({
   href,
   variant = 'default',
   disabled = false,
+  icon,
 }) => {
   return (
     <Link
       href={href}
       className={cn(
         buttonVariants({ variant }),
-        'w-full block text-black !rounded-lg',
+        'w-full flex text-neutral-100 !rounded-lg gap-2',
         {
           [classNames.secondary]: variant === 'secondary',
           [classNames.disabledSecondary]: variant === 'secondary' && disabled,
@@ -38,6 +40,7 @@ export const PrimaryButtonLink: FC<Props> = ({
         },
       )}
     >
+      {icon}
       {text}
     </Link>
   );

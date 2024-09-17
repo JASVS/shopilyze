@@ -1,6 +1,9 @@
+import React from 'react';
+
 import { Meta, StoryObj } from '@storybook/react';
 
 import { PrimaryButton } from '..';
+import { GoogleIcon } from '../../Icons/Providers';
 
 const meta: Meta<typeof PrimaryButton> = {
   title: 'UI/Buttons/Button',
@@ -30,4 +33,12 @@ export const Outline: Story = {
     text: 'Example',
     variant: 'outline',
   },
+};
+
+export const WithIcon: Story = {
+  args: {
+    text: 'Example',
+    variant: 'secondary',
+  },
+  render: (args) => <PrimaryButton {...args} icon={<GoogleIcon />} />,
 };
