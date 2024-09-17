@@ -3,47 +3,49 @@ export const classNames = {
     font-Montserrat
     font-semibold
     !text-black
-    bg-primary-100
-    hover:bg-primary-90
-    active:bg-primary-30
+    bg-contrast-100
+    hover:bg-contrast-90
+    active:bg-contrast-30
 
-    disabled:text-disabled-100
-    disabled:bg-disabled-90
+    disabled:text-neutral-100
+    disabled:bg-neutral-90
   `,
   disabledDefault: `
-    !text-disabled-100
-    !bg-disabled-90
+    !text-neutral-40
+    !bg-neutral-20
+    pointer-events-none
   `,
 
   secondary: `
     font-Montserrat
     font-semibold
     text-black
-    bg-[transparent]
-    border-primary-100
+    !bg-[transparent]
+    border-contrast-100
     border-2
-    hover:bg-primary-40
-    active:bg-primary-80
+    hover:bg-contrast-40
+    active:bg-contrast-80
 
-    disabled:border-disabled-90
-    disabled:text-disabled-100
+    disabled:border-neutral-30
+    disabled:text-neutral-30
     disabled:opacity-100
   `,
   disabledSecondary: `
-    border-disabled-90
-    text-disabled-90
+    text-neutral-40
+    border-neutral-20
+    pointer-events-none
   `,
 
   outline: `
     font-Montserrat
     font-semibold
     text-black
-    bg-primary-50
-    hover:bg-primary-60
-    active:bg-primary-70
+    bg-contrast-50
+    hover:bg-contrast-60
+    active:bg-contrast-70
 
-    disabled:text-disabled-100
-    disabled:bg-disabled-90
+    disabled:text-neutral-40
+    disabled:bg-neutral-20
     disabled:opacity-100
   `,
 };

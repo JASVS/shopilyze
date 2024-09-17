@@ -29,7 +29,7 @@ export const PrimaryButton: FC<Props> = ({
     onClick={onClick}
     className={cn(
       buttonVariants({ variant }),
-      'w-full block text-black !rounded-lg',
+      'w-full block text-neutral-100 !rounded-lg',
       {
         [classNames.default]: variant === 'default',
         [classNames.secondary]: variant === 'secondary',
