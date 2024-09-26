@@ -2,17 +2,17 @@ import React from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { PrimaryButton } from '..';
+import { Button } from '..';
 import { GoogleIcon } from '../../Icons/Providers';
 
-const meta: Meta<typeof PrimaryButton> = {
+const meta: Meta<typeof Button> = {
   title: 'UI/Buttons/Button',
   tags: ['autodocs'],
-  component: PrimaryButton,
+  component: Button,
 };
 
 export default meta;
-type Story = StoryObj<typeof PrimaryButton>;
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
@@ -40,5 +40,5 @@ export const WithIcon: Story = {
     text: 'Example',
     variant: 'secondary',
   },
-  render: (args) => <PrimaryButton {...args} icon={<GoogleIcon />} />,
+  render: (args) => <Button {...args} icon={<GoogleIcon />} />,
 };

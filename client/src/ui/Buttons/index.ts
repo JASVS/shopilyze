@@ -1,2 +1,2 @@
-export { PrimaryButton } from './Button';
-export { PrimaryButtonLink } from './ButtonLink';
+export { Button } from './Button';
+export { ButtonLink } from './ButtonLink';

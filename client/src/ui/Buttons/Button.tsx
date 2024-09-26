@@ -4,7 +4,7 @@ import { FC, ReactNode } from 'react';
 
 import cn from 'classnames';
 
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button as UIButton, buttonVariants } from '@/components/ui/button';
 
 import { classNames } from './classNames';
 
@@ -17,7 +17,7 @@ type Props = {
   icon?: ReactNode;
 };
 
-export const PrimaryButton: FC<Props> = ({
+export const Button: FC<Props> = ({
   text,
   variant = 'default',
   type = 'button',
@@ -25,7 +25,7 @@ export const PrimaryButton: FC<Props> = ({
   onClick,
   icon,
 }) => (
-  <Button
+  <UIButton
     type={type}
     disabled={disabled}
     onClick={onClick}
@@ -41,5 +41,5 @@ export const PrimaryButton: FC<Props> = ({
   >
     {icon}
     {text}
-  </Button>
+  </UIButton>
 );

@@ -2,17 +2,17 @@ import React from 'react';
 
 import { Meta, StoryObj } from '@storybook/react';
 
-import { PrimaryButtonLink } from '..';
+import { ButtonLink } from '..';
 import { GoogleIcon } from '../../Icons/Providers';
 
-const meta: Meta<typeof PrimaryButtonLink> = {
+const meta: Meta<typeof ButtonLink> = {
   title: 'UI/Buttons/Link',
   tags: ['autodocs'],
-  component: PrimaryButtonLink,
+  component: ButtonLink,
 };
 
 export default meta;
-type Story = StoryObj<typeof PrimaryButtonLink>;
+type Story = StoryObj<typeof ButtonLink>;
 
 export const Primary: Story = {
   args: {
@@ -44,5 +44,5 @@ export const WithIcon: Story = {
     href: '/',
     variant: 'secondary',
   },
-  render: (args) => <PrimaryButtonLink {...args} icon={<GoogleIcon />} />,
+  render: (args) => <ButtonLink {...args} icon={<GoogleIcon />} />,
 };

@@ -15,7 +15,7 @@ type Props = {
   icon?: ReactNode;
 };
 
-export const PrimaryButtonLink: FC<Props> = ({
+export const ButtonLink: FC<Props> = ({
   text,
   href,
   variant = 'default',
