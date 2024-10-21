@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 
 import ukrainianMessages from '../../../../messages/uk';
@@ -8,6 +9,7 @@ const messages = {
 };
 
 export default polyglotI18nProvider(
+  // @ts-expect-error
   (locale) => {
     if (locale === 'ru') {
       return messages[locale]();
