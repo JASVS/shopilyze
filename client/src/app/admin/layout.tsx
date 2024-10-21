@@ -1,9 +1,13 @@
-import { PropsWithChildren } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
-export default function MainLayout({ children }: Readonly<PropsWithChildren>) {
+import '../[locale]/globals.css';
+
+const AdminLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html>
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default AdminLayout;
