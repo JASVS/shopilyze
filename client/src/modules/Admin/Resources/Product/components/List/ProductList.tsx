@@ -30,10 +30,11 @@ export const ProductList: FC = () => {
     >
       <Datagrid>
         <TextField source="id" />
-        <TextField source="title" />
-        <ImageField source="titlePictureUrl" />
-        <TextField source="category.name" />
-        <TextField source="price" />
+        <TextField source="productCode" label="Код товара" />
+        <TextField source="title.ru" label="Название" />
+        <ImageField source="pictureUrl" />
+        <TextField source="category.name" label="Категория" />
+        <TextField source="price" label="Цена" />
 
         <EditButton />
         <ShowButton />

@@ -1,3 +1,3 @@
-export { ProductList } from './List/ProductList';
-export { ProductCreate } from './Create/ProductCreate';
-export { ProductEdit } from './Edit/ProductEdit';
+export { ProductList } from './components/List/ProductList';
+export { ProductCreate } from './components/Create/ProductCreate';
+export { ProductEdit } from './components/Edit/ProductEdit';
