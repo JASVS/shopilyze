@@ -27,29 +27,29 @@ export const ProductCreate: FC = () => {
         <TabbedForm.Tab label="RU">
           <TextInput
             label="Название"
-            source="RuTitle"
+            source="ruTitle"
             validate={[required()]}
           />
           <RichTextInput
             label="Описание"
-            source="RuDescription"
+            source="ruDescription"
             fullWidth
             validate={[required()]}
           />
         </TabbedForm.Tab>
 
         <TabbedForm.Tab label="UK">
-          <TextInput label="Назва" source="UkrTitle" validate={[required()]} />
+          <TextInput label="Назва" source="ukrTitle" validate={[required()]} />
           <RichTextInput
             label="Опис"
-            source="UkrDescription"
+            source="ukrDescription"
             fullWidth
             validate={[required()]}
           />
         </TabbedForm.Tab>
 
         <TabbedForm.Tab label="Общая информация">
-          <ReferenceInput source="category" reference="category">
+          <ReferenceInput source="category" reference="product/category">
             <AutocompleteInput
               label="Категория"
               validate={[required()]}
@@ -74,7 +74,7 @@ export const ProductCreate: FC = () => {
 
         <TabbedForm.Tab label="Изображения">
           <ImageInput
-            source="pictures"
+            source="picture"
             label="Главное"
             accept={{ 'image/*': ['.jpg'] }}
             maxSize={300000}

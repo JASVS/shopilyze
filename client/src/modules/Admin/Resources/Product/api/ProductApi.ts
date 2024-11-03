@@ -10,15 +10,15 @@ const endpoint = process.env.NEXT_PUBLIC_CLIENT_HOST as string;
 const baseDataProvider = simpleRestDataProvider(endpoint);
 
 type PostParams = {
-  RuTitle: string;
-  UkrTitle: string;
-  RuDescription: string;
-  UkrDescription: string;
+  ruTitle: string;
+  ukrTitle: string;
+  ruDescription: string;
+  ukrDescription: string;
   category: string;
   productCode: string;
   price: number;
-  seoUrl: string;
-  pictures: {
+  seoURL: string;
+  picture: {
     rawFile: File;
     src?: string;
     title?: string;
@@ -27,14 +27,15 @@ type PostParams = {
 
 const createPostFormData = (params: CreateParams<PostParams>) => {
   const productToCreate = {
-    Picture: params.data.pictures!.rawFile,
-    Rutitle: params.data.RuTitle,
-    UkrTitle: params.data.UkrTitle,
-    RuDescription: params.data.RuDescription,
-    UkrDescription: params.data.UkrDescription,
-    Category: params.data.category,
-    Price: params.data.price,
-    SeoUrl: params.data.seoUrl,
+    picture: params.data.picture!.rawFile,
+    rutitle: params.data.ruTitle,
+    ukrTitle: params.data.ukrTitle,
+    ruDescription: params.data.ruDescription,
+    ukrDescription: params.data.ukrDescription,
+    category: params.data.category,
+    price: params.data.price,
+    seoURL: params.data.seoURL,
+    productCode: params.data.productCode,
   };
 
   const formData = new FormData();
@@ -42,8 +43,6 @@ const createPostFormData = (params: CreateParams<PostParams>) => {
   Object.entries(productToCreate).forEach(([key, value]) => {
     formData.append(key, value as string);
   });
-
-  console.log(formData);
 
   return formData;
 };
@@ -75,19 +74,4 @@ export const productApi: DataProvider = {
 
     return baseDataProvider.create(resource, params);
   },
-
-  // update: (resource, params) => {
-  //   if (resource === 'product') {
-  //     const formData = createPostFormData(params);
-  //     formData.append('id', params.id);
-  //     return fetchUtils
-  //       .fetchJson(`${endpoint}/${resource}`, {
-  //         method: 'PUT',
-  //         body: formData,
-  //       })
-  //       .then(({ json }) => ({ data: json }));
-  //   }
-
-  //   return baseDataProvider.update(resource, params);
-  // },
 };

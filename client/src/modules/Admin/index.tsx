@@ -42,7 +42,7 @@ const AdminApp = () => {
       />
 
       <Resource
-        name="category"
+        name="product/category"
         hasCreate
         hasEdit
         hasShow
